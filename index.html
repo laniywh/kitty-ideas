@@ -1,63 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Kitty Fun Ideas Generator</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-      /* Custom styles if needed */
-  </style>
-</head>
-<body class="bg-blue-50 text-gray-800 font-sans flex flex-col min-h-screen">
-<div class="container mx-auto p-6">
-  <header class="bg-yellow-100 p-6 rounded-lg shadow-md mb-6 text-center">
-    <img src="cat-face-doodle.png" alt="Cute Cat Face" class="w-24 mx-auto mb-4">
-    <h1 class="text-2xl font-bold text-gray-800">Ready for Some Fun?</h1>
-  </header>
+  <meta name='description' content='Generate some fun ideas for your kitty to play with!'>
+  <link rel='stylesheet' href='style.css'>
+  <link rel='preconnect' href='https://fonts.googleapis.com'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap' rel='stylesheet'>
+<body>
+<div class='container'>
+  <main>
+    <h1 style='display: none;'>Kitty Fun Ideas Generator</h1>
+    <img class='title-img' src='assets/images/title.png' alt='Kitty Fun Ideas Generator'>
 
-  <div class="flex flex-col items-center mb-6">
-    <div class="text-6xl mb-4 text-pink-400">
-      <span>🐾</span>
-      <span>😺</span>
-      <span>🎉</span>
+    <div class='ideas-container'>
+      <div class='idea old-idea'></div>
     </div>
-    <button id="generateButton"
-            class="bg-pink-500 text-white py-3 px-6 rounded-lg shadow-md hover:bg-pink-600 transition-colors duration-300">
-      Get a New Idea!
-    </button>
-  </div>
 
-  <div id="idea" class="text-xl p-6 bg-white rounded-lg shadow-md text-gray-700 mx-auto max-w-lg text-center">
-    Click the button to get a new kitty play idea!
-  </div>
-
-  <footer class="bg-yellow-100 p-4 rounded-lg shadow-md mt-auto text-center">
-    <p class="text-gray-600">More Ideas Coming Soon!</p>
-  </footer>
+    <div class='btn-container'>
+      <img class='arrow-img' src='assets/images/arrow.svg' alt='Arrow'>
+      <button id='new-idea-btn' class='text-cursive'>New Idea! 💡</button>
+    </div>
+  </main>
 </div>
 
-<script>
-  const ideas = [
-    "Laser pointer chase",
-    "Feather wand play",
-    "Cardboard box fort",
-    "Crumpled paper ball toss",
-    "Hide treats in puzzle toys",
-    "Catnip mouse toy",
-    "Empty paper bag exploration",
-    "Ping pong ball in the bathtub",
-    "Window perch for bird watching",
-    "Ribbon dragging game"
-    // Add more ideas here
-  ];
-
-  document.getElementById("generateButton").addEventListener("click", () => {
-    const randomIndex = Math.floor(Math.random() * ideas.length);
-    const idea = ideas[randomIndex];
-    document.getElementById("idea").textContent = idea;
-  });
-</script>
+<script src='ideas.js' defer></script>
+<script src='script.js' defer></script>
 </body>
 </html>
 
