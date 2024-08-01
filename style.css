@@ -109,6 +109,11 @@ main {
   transition: transform .5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
+button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 #new-idea-btn {
   cursor: pointer;
   width: 100%;
@@ -122,6 +127,9 @@ main {
 }
 
 #new-idea-btn:hover {
+  background-color: var(--color-accent-blue);
+}
+#new-idea-btn:active {
   background-color: var(--color-accent-blue);
 }
 
