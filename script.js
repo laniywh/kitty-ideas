@@ -52,30 +52,6 @@ function showNewIdea() {
   });
 }
 
-// This function removes the :hover style from the CSS rules on mobile devices
-// to prevent the button from being highlighted when tapped
-function removeHoverStyleOnMobile() {
-  document.addEventListener('DOMContentLoaded', function () {
-    if ('ontouchstart' in document.documentElement) {
-      try {
-        for (var si in document.styleSheets) {
-          var styleSheet = document.styleSheets[si];
-          if (!styleSheet.cssRules) continue;
-
-          for (var ri = styleSheet.cssRules.length - 1; ri >= 0; ri--) {
-            if (!styleSheet.cssRules[ri].selectorText) continue;
-
-            if (styleSheet.cssRules[ri].selectorText.includes(':hover')) {
-              styleSheet.deleteRule(ri);
-            }
-          }
-        }
-      } catch (ex) {
-      }
-    }
-  });
-}
-
 populateIdea();
 document.getElementById("new-idea-btn").addEventListener("click", showNewIdea);
 
