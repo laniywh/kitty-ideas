@@ -31,7 +31,7 @@ function showNewIdea() {
 
   // Create a new card
   const newIdea = document.createElement('div');
-  newIdea.classList.add('idea', 'new-idea');
+  newIdea.classList.add('idea', 'new-idea', 'card');
   newIdea.textContent = generateIdea();
 
   // Append the new card to the container

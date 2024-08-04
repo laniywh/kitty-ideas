@@ -4,32 +4,45 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Kitty Fun Ideas Generator</title>
-  <meta name='description' content='Generate some fun ideas for your kitty to play with!'>
-  <link rel='stylesheet' href='style.css?v=20240801.1'>
+  <meta name='description'
+        content='Discover creative activities and games to keep your cat engaged and happy. The Kitty Fun Ideas Generator offers endless inspiration to stimulate your feline friend!'>
+  <link rel='stylesheet' href='reset.css?v=20240804'>
+  <link rel='stylesheet' href='style.css?v=20240804'>
   <link rel='preconnect' href='https://fonts.googleapis.com'>
   <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
   <link href='https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap' rel='stylesheet'>
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96.png">
+  <link rel='icon' type='image/png' sizes='16x16' href='/assets/favicon/favicon-16.png'>
+  <link rel='icon' type='image/png' sizes='32x32' href='/assets/favicon/favicon-32.png'>
+  <link rel='icon' type='image/png' sizes='96x96' href='/assets/favicon/favicon-96.png'>
+</head>
 <body>
 <div class='container'>
-  <main>
-    <h1 style='display: none;'>Kitty Fun Ideas Generator</h1>
-    <img class='title-img' src='assets/images/title.png' alt='Kitty Fun Ideas Generator'>
+  <main class='home-page'>
+    <div class='header'>
 
-    <div class='ideas-container'>
-      <div class='idea old-idea'></div>
+      <h1 style='display: none;'>Kitty Fun Ideas Generator</h1>
+
+      <img class='title-img' src='assets/images/title.png' alt='Kitty Fun Ideas Generator'>
+      <p class='lead'>Generate some fun ideas for your kitty to play with!</p>
+      <p><small>Wonder why your feline friend needs stimulation to stay
+        happy? Check <a href='why.html'>this</a> out.</small></p>
     </div>
 
-    <div class='btn-container'>
-      <img class='arrow-img' src='assets/images/arrow.svg' alt='Arrow'>
-      <button id='new-idea-btn' class='text-cursive'>New Idea! 💡</button>
+    <div class='ideas-generator'>
+      <div class='ideas-container'>
+        <div class='idea old-idea card'></div>
+      </div>
+
+      <div class='btn-container'>
+        <img class='arrow-img' src='assets/images/arrow.svg' alt='Arrow'>
+        <button id='new-idea-btn' class='button text-cursive'>New Idea! 💡</button>
+      </div>
     </div>
   </main>
 
   <footer>
     <div class='links'>
+      <a href='index.html'>Home</a>
       <a target='_blank' href='https://github.com/laniywhdev/kitty-ideas'>GitHub</a>
       <a href='credits.html'>Credits</a>
     </div>
